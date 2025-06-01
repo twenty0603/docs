@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prospectus Auto-École - Formule Sérénité Permis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#6b7280',
+                        accent: '#f8fafc',
+                        dark: '#374151',
+                        light: '#e5e7eb'
+                    },
+                    fontFamily: {
+                        'heading': ['Inter', 'sans-serif'],
+                        'body': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            body { font-size: 10pt; line-height: 1.2; margin: 0.5in; }
+            .no-print { display: none !important; }
+            .print-compact { margin: 0 !important; padding: 0.5rem !important; }
+            .print-small { font-size: 8pt !important; }
+            .print-medium { font-size: 10pt !important; }
+            .print-large { font-size: 12pt !important; }
+            .print-break { page-break-before: always; }
+            section { margin-bottom: 0.5rem !important; }
+            .card-shadow { box-shadow: none !important; border: 1px solid #e5e7eb; }
+            header { position: relative !important; padding: 0.75rem !important; }
+            .absolute { position: absolute !important; }
+            /* Ajustements pour le logo plus grand */
+            header .absolute div { height: 4rem !important; width: 7rem !important; }
+            header .absolute img { height: 3.5rem !important; width: 6rem !important; }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .step-number {
+            background: linear-gradient(45deg, #dc2626, #ef4444);
+        }
+    </style>
+</head>
+<body class="font-body bg-white text-gray-800">
+    
+    <!-- En-tête compact -->
+    <header class="relative py-6 bg-gradient-to-r from-secondary via-gray-600 to-dark text-white print-compact">
+        <!-- Logo en haut à gauche -->
+        <div class="absolute left-4 top-2 flex items-center">
+            <div class="h-20 w-32 bg-white bg-opacity-15 rounded-lg flex items-center justify-center border border-white border-opacity-40 p-2 backdrop-blur-sm">
+                <img src="img/logo_red.png" alt="Logo Auto-École" class="h-16 w-28 object-contain" id="logo-img" 
+                     onerror="this.style.display='none'; document.getElementById('logo-placeholder').classList.remove('hidden');">
+                <span class="text-white text-sm font-bold" id="logo-placeholder">[LOGO]</span>
+            </div>
+        </div>
+        
+        <!-- Contenu centré -->
+        <div class="text-center pl-36">
+            <h1 class="text-2xl md:text-3xl font-heading font-bold print-large text-white">[NOM AUTO-ÉCOLE]</h1>
+            <h2 class="text-lg md:text-xl font-semibold text-primary print-medium">Formule Sérénité Permis</h2>
+            <p class="text-sm print-small mt-1 text-accent">Votre Permis de Conduire en Toute Confiance et Sérénité</p>
+        </div>
+    </header>
+
+    <!-- Section 1: Notre Philosophie (Condensée) -->
+    <section class="py-3 px-4 bg-accent print-compact">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
+                Obtenir Votre Permis : Plus Qu'un Examen, Une Nouvelle Liberté
+            </h2>
+            <div class="w-16 h-0.5 bg-primary mb-3"></div>
+            
+            <p class="text-sm leading-relaxed text-center print-small text-secondary">
+                Nous savons que l'apprentissage de la conduite peut parfois sembler 
+                <span class="font-semibold text-primary">complexe, stressant ou chronophage</span>. 
+                Chez <span class="font-bold text-dark">[Nom de l'Auto-École]</span>, notre mission est de 
+                <span class="font-semibold text-dark">transformer cette étape en une expérience fluide, enrichissante et couronnée de succès</span>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 2: La Formule (Condensée) -->
+    <section class="py-3 px-4 bg-gray-50 print-compact">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
+                Découvrez la Formule Sérénité Permis
+            </h2>
+            <div class="w-16 h-0.5 bg-primary mb-3"></div>
+            
+            <div class="space-y-2">
+                <!-- Étape 1 -->
+                <div class="bg-white rounded-lg p-3 card-shadow flex items-start space-x-3 border-l-4 border-primary">
+                    <div class="step-number text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs shrink-0">1</div>
+                    <div>
+                        <h3 class="text-sm font-bold text-dark mb-1 print-small">Évaluation Personnalisée de Départ</h3>
+                        <p class="text-xs text-secondary print-small">Une analyse précise de vos besoins pour un plan de formation sur mesure.</p>
+                    </div>
+                </div>
+                
+                <!-- Étape 2 -->
+                <div class="bg-white rounded-lg p-3 card-shadow flex items-start space-x-3 border-l-4 border-secondary">
+                    <div class="step-number text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs shrink-0">2</div>
+                    <div>
+                        <h3 class="text-sm font-bold text-dark mb-1 print-small">Démarches Administratives Simplifiées</h3>
+                        <p class="text-xs text-secondary print-small">Nous nous occupons de votre dossier NEPH pour vous libérer de la paperasse.</p>
+                    </div>
+                </div>
+                
+                <!-- Étape 3 -->
+                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
+                    <div class="flex items-start space-x-3 mb-2">
+                        <div class="step-number text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs shrink-0">3</div>
+                        <h3 class="text-sm font-bold text-dark print-small">Le Code : Flexibilité + Expertise</h3>
+                    </div>
+                    <div class="ml-9 space-y-1">
+                        <div class="bg-accent border-l-2 border-secondary p-2 rounded text-xs print-small">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32" class="mr-2 shrink-0"><path d="M14.5 9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm-5 5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm4 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-4-11a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm0 10a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm9-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm0-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-5 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm6 4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1z"/><path d="M9 2a3 3 0 0 0-3 3v22a3 3 0 0 0 3 3h13a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zm15 4v20H7V6z"/></g></svg>
+                                <span class="font-bold text-dark">Accès Illimité en Ligne</span>
+                                <span class="text-secondary ml-2">- 24h/24, 7j/7</span>
+                            </div>
+                        </div>
+                        <div class="bg-red-50 border-l-2 border-primary p-2 rounded text-xs print-small">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#dc2626" d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z"/></g></svg>
+                                <span class="font-bold text-primary">10 Séances en Salle avec Formateur</span>
+                                <span class="text-secondary ml-2">- Sessions interactives</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Étape 4 -->
+                <div class="bg-white rounded-lg p-3 card-shadow flex items-start space-x-3 border-l-4 border-secondary">
+                    <div class="step-number text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs shrink-0">4</div>
+                    <div>
+                        <h3 class="text-sm font-bold text-dark mb-1 print-small">Conduite Accompagnée & Personnalisée</h3>
+                        <p class="text-xs text-secondary print-small">20 leçons avec le <span class="font-bold text-primary">MÊME formateur</span> pour une progression fluide.</p>
+                    </div>
+                </div>
+                
+                <!-- Étape 5 -->
+                <div class="bg-white rounded-lg p-3 card-shadow flex items-start space-x-3 border-l-4 border-primary">
+                    <div class="step-number text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs shrink-0">5</div>
+                    <div>
+                        <h3 class="text-sm font-bold text-dark mb-1 print-small">Préparation et Accompagnement aux Examens</h3>
+                        <p class="text-xs text-secondary print-small">Nous vous préparons et accompagnons pour les examens.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Nos Avantages Exclusifs (Condensée) -->
+    <section class="py-3 px-4 bg-accent print-compact">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
+                Pourquoi Choisir [Nom de l'Auto-École] ?
+            </h2>
+            <div class="w-16 h-0.5 bg-primary mb-3"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <!-- Avantage 1 -->
+                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
+                    <div class="flex items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><path fill="#dc2626" d="M16 17v2H2v-2s0-4 7-4s7 4 7 4m-3.5-9.5A3.5 3.5 0 1 0 9 11a3.5 3.5 0 0 0 3.5-3.5m3.44 5.5A5.32 5.32 0 0 1 18 17v2h4v-2s0-3.63-6.06-4M15 4a3.4 3.4 0 0 0-1.93.59a5 5 0 0 1 0 5.82A3.4 3.4 0 0 0 15 11a3.5 3.5 0 0 0 0-7"/></svg>
+                        <h3 class="text-sm font-bold text-dark print-small">Suivi Personnalisé & Continu</h3>
+                    </div>
+                    <p class="text-xs text-secondary print-small">
+                        Même formateur, relation de confiance, meilleure efficacité.
+                    </p>
+                </div>
+                
+                <!-- Avantage 2 -->
+                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-secondary">
+                    <div class="flex items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32" class="mr-2 shrink-0"><path fill="#6b7280" d="m16 7.78l-.313.095l-12.5 4.188L.345 13L2 13.53v8.75c-.597.347-1 .98-1 1.72a2 2 0 1 0 4 0c0-.74-.403-1.373-1-1.72v-8.06l2 .655V20c0 .82.5 1.5 1.094 1.97c.594.467 1.332.797 2.218 1.093c1.774.59 4.112.937 6.688.937s4.914-.346 6.688-.938c.886-.295 1.624-.625 2.218-1.093C25.5 21.5 26 20.82 26 20v-5.125l2.813-.938L31.655 13l-2.843-.938l-12.5-4.187zm0 2.095L25.375 13L16 16.125L6.625 13zm-8 5.688l7.688 2.562l.312.094l.313-.095L24 15.562V20c0 .01.004.126-.313.375c-.316.25-.883.565-1.625.813C20.58 21.681 18.395 22 16 22s-4.58-.318-6.063-.813c-.74-.247-1.308-.563-1.624-.812C7.995 20.125 8 20.01 8 20z"/></svg>
+                        <h3 class="text-sm font-bold text-dark print-small">Séances Code Interactives</h3>
+                    </div>
+                    <p class="text-xs text-secondary print-small">
+                        Sessions en présentiel pour une compréhension profonde.
+                    </p>
+                </div>
+                
+                <!-- Avantage 3 -->
+                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
+                    <div class="flex items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" class="mr-2 shrink-0"><path fill="#dc2626" d="M240 208h-16v-72l2.34 2.34A8 8 0 0 0 237.66 127l-98.35-98.32a16 16 0 0 0-22.62 0L18.34 127a8 8 0 0 0 11.32 11.31L32 136v72H16a8 8 0 0 0 0 16h224a8 8 0 0 0 0-16M48 120l80-80l80 80v88h-48v-56a8 8 0 0 0-8-8h-48a8 8 0 0 0-8 8v56H48Zm96 88h-32v-48h32Z"/></svg>
+                        <h3 class="text-sm font-bold text-dark print-small">Récupération à Domicile</h3>
+                    </div>
+                    <p class="text-xs text-secondary print-small">
+                        Nous venons vous chercher (centre-ville de Cayenne).
+                    </p>
+                </div>
+                
+                <!-- Avantage 4 -->
+                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-secondary">
+                    <div class="flex items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512" class="mr-2 shrink-0"><rect width="416" height="320" x="48" y="96" fill="none" stroke="#6b7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="56" ry="56"/><path fill="none" stroke="#6b7280" stroke-linejoin="round" stroke-width="60" d="M48 192h416M128 300h48v20h-48z"/></svg>
+                        <h3 class="text-sm font-bold text-dark print-small">Facilités de Paiement</h3>
+                    </div>
+                    <p class="text-xs text-secondary print-small">
+                        Paiement jusqu'à 4 fois sans frais.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Votre Investissement (Condensée) -->
+    <section class="py-3 px-4 bg-gray-50 print-compact print-break">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
+                Votre Investissement pour la Liberté
+            </h2>
+            <div class="w-16 h-0.5 bg-primary mx-auto mb-3"></div>
+            
+            <div class="bg-white rounded-lg p-4 card-shadow max-w-lg mx-auto border-2 border-light">
+                <h3 class="text-lg font-bold text-secondary mb-2 print-medium">Formule Sérénité Permis</h3>
+                <div class="text-3xl font-bold text-primary mb-2 print-large">[PRIX]€</div>
+                <p class="text-xs text-secondary mb-3 print-small">Tout compris</p>
+                
+                <div class="border-t border-light pt-3">
+                    <h4 class="text-sm font-bold text-dark mb-2 print-small">Facilités de Paiement</h4>
+                    <div class="flex justify-center space-x-2">
+                        <div class="bg-accent rounded p-2 text-xs print-small border border-light">
+                            <div class="font-bold text-primary">2x</div>
+                            <div class="text-secondary">sans frais</div>
+                        </div>
+                        <div class="bg-accent rounded p-2 text-xs print-small border border-light">
+                            <div class="font-bold text-secondary">3x</div>
+                            <div class="text-secondary">sans frais</div>
+                        </div>
+                        <div class="bg-accent rounded p-2 text-xs print-small border border-light">
+                            <div class="font-bold text-primary">4x</div>
+                            <div class="text-secondary">sans frais</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Témoignages (Condensée) -->
+    <section class="py-3 px-4 bg-accent print-compact">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
+                Ils témoignent de leur succès !
+            </h2>
+            <div class="w-16 h-0.5 bg-primary mb-3"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <!-- Témoignage 1 -->
+                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
+                    <div class="flex items-center mb-2">
+                        <div class="w-6 h-6 bg-light rounded-full flex items-center justify-center mr-2 border border-secondary">
+                            <span class="text-dark font-bold text-xs">M</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark text-xs print-small">Marie, 19 ans</div>
+                            <div class="text-yellow-500 text-xs">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-secondary italic print-small">
+                        "Grâce aux séances en salle, j'ai eu mon code du premier coup !"
+                    </p>
+                </div>
+                
+                <!-- Témoignage 2 -->
+                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-secondary">
+                    <div class="flex items-center mb-2">
+                        <div class="w-6 h-6 bg-light rounded-full flex items-center justify-center mr-2 border border-secondary">
+                            <span class="text-dark font-bold text-xs">J</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark text-xs print-small">Julien, 22 ans</div>
+                            <div class="text-yellow-500 text-xs">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-secondary italic print-small">
+                        "Le suivi par le même formateur, j'ai progressé en confiance."
+                    </p>
+                </div>
+                
+                <!-- Témoignage 3 -->
+                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
+                    <div class="flex items-center mb-2">
+                        <div class="w-6 h-6 bg-light rounded-full flex items-center justify-center mr-2 border border-secondary">
+                            <span class="text-dark font-bold text-xs">S</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark text-xs print-small">Sophie, 25 ans</div>
+                            <div class="text-yellow-500 text-xs">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-secondary italic print-small">
+                        "La récupération à domicile, très pratique !"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Appel à l'action (Condensée) -->
+    <section class="py-4 px-4 gradient-bg text-white print-compact">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-xl font-heading font-bold mb-2 print-medium">
+                Votre Prochaine Étape vers le Permis !
+            </h2>
+            <div class="w-16 h-0.5 bg-white mx-auto mb-3"></div>
+            
+            <p class="text-sm mb-4 print-small">
+                Contactez-nous dès aujourd'hui pour programmer votre évaluation personnalisée !
+            </p>
+            
+            <div class="bg-white bg-opacity-15 backdrop-blur-lg rounded-lg p-4 border border-white border-opacity-30">
+                <h3 class="text-lg font-bold mb-3 print-medium">Nos Coordonnées</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left text-sm print-small">
+                    <div>
+                        <div class="mb-2">
+                            <span class="text-white mr-2">📍</span>
+                            <span class="font-bold">Adresse :</span> [Votre Adresse]
+                        </div>
+                        <div class="mb-2">
+                            <span class="text-white mr-2">📞</span>
+                            <span class="font-bold">Tél :</span> [Votre Numéro]
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-2">
+                            <span class="text-white mr-2">✉️</span>
+                            <span class="font-bold">Email :</span> [Votre Email]
+                        </div>
+                        <div class="mb-2">
+                            <span class="text-white mr-2">🌐</span>
+                            <span class="font-bold">Web :</span> [Votre Site]
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-white border-opacity-20 mt-3 pt-3">
+                    <p class="text-lg font-bold text-white print-medium">
+                        🚗 Votre liberté commence ici ! 🗝️
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer compact -->
+    <footer class="bg-dark text-white py-2 px-4 text-center print-compact">
+        <p class="text-xs print-small">
+            © 2024 [Nom de l'Auto-École] - Document commercial non contractuel
+        </p>
+    </footer>
+
+    <!-- Bouton d'impression (masqué à l'impression) -->
+    <div class="fixed bottom-6 right-6 no-print">
+        <button onclick="window.print()" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300">
+            🖨️ Imprimer PDF
+        </button>
+    </div>
+
+    <!-- Script pour l'intégration du logo -->
+    <script>
+        // Fonction pour intégrer le logo avec diagnostic
+        function integrerLogo(cheminLogo) {
+            const logoImg = document.getElementById('logo-img');
+            const logoPlaceholder = document.getElementById('logo-placeholder');
+            
+            if (cheminLogo && cheminLogo !== '[CHEMIN_VERS_LOGO]') {
+                logoImg.src = cheminLogo;
+                
+                // Test de chargement du logo
+                logoImg.onload = function() {
+                    console.log('✅ Logo chargé avec succès:', cheminLogo);
+                    logoPlaceholder.style.display = 'none';
+                    logoImg.style.display = 'block';
+                };
+                
+                logoImg.onerror = function() {
+                    console.log('❌ Erreur de chargement du logo:', cheminLogo);
+                    logoImg.style.display = 'none';
+                    logoPlaceholder.style.display = 'block';
+                    logoPlaceholder.classList.remove('hidden');
+                };
+            }
+        }
+        
+        // Diagnostic au chargement de la page
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoImg = document.getElementById('logo-img');
+            const logoPlaceholder = document.getElementById('logo-placeholder');
+            
+            console.log('🔍 Diagnostic du logo:');
+            console.log('- Chemin actuel:', logoImg.src);
+            console.log('- Élément img trouvé:', !!logoImg);
+            console.log('- Élément placeholder trouvé:', !!logoPlaceholder);
+            
+            // Tester plusieurs chemins possibles
+            const cheminsPossibles = [
+                'img/logo_red.png',
+                'logo_red.png',
+                './img/logo_red.png',
+                '../img/logo_red.png',
+                'assets/logo_red.png'
+            ];
+            
+            let logoTrouve = false;
+            
+            // Fonction pour tester un chemin
+            function testerChemin(index) {
+                if (index >= cheminsPossibles.length) {
+                    console.log('❌ Aucun logo trouvé dans les chemins testés');
+                    logoPlaceholder.classList.remove('hidden');
+                    logoImg.style.display = 'none';
+                    return;
+                }
+                
+                const chemin = cheminsPossibles[index];
+                const testImg = new Image();
+                
+                testImg.onload = function() {
+                    console.log('✅ Logo trouvé:', chemin);
+                    logoImg.src = chemin;
+                    logoImg.style.display = 'block';
+                    logoPlaceholder.style.display = 'none';
+                    logoTrouve = true;
+                };
+                
+                testImg.onerror = function() {
+                    console.log('❌ Chemin non trouvé:', chemin);
+                    testerChemin(index + 1);
+                };
+                
+                testImg.src = chemin;
+            }
+            
+            // Commencer le test des chemins
+            setTimeout(() => {
+                if (!logoTrouve) {
+                    testerChemin(0);
+                }
+            }, 100);
+        });
+        
+        // Instructions pour l'utilisateur
+        console.log(`
+🎯 INSTRUCTIONS POUR LE LOGO:
+1. Placez votre fichier logo_red.png dans un dossier 'img/'
+2. Ou placez-le à la racine du projet
+3. Vérifiez que le nom du fichier est exactement 'logo_red.png'
+4. Formats supportés: PNG, JPG, SVG
+5. Taille recommandée: 200x200px minimum
+
+📁 Structure recommandée:
+├── prospectus-auto-ecole.html
+└── img/
+    └── logo_red.png
+        `);
+    </script>
+
+</body>
+</html> 
