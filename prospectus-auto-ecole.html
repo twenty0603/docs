@@ -27,33 +27,127 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         @media print {
-            body { font-size: 10pt; line-height: 1.2; margin: 0.5in; }
-            .no-print { display: none !important; }
-            .print-compact { margin: 0 !important; padding: 0.5rem !important; }
-            .print-small { font-size: 8pt !important; }
-            .print-medium { font-size: 10pt !important; }
-            .print-large { font-size: 12pt !important; }
-            .print-break { page-break-before: always; }
-            section { margin-bottom: 0.5rem !important; }
-            .card-shadow { box-shadow: none !important; border: 1px solid #e5e7eb; }
-            header { position: relative !important; padding: 0.75rem !important; }
-            .absolute { position: absolute !important; }
-            /* Ajustements pour le logo plus grand */
-            header .absolute div { height: 4rem !important; width: 7rem !important; }
-            header .absolute img { height: 3.5rem !important; width: 6rem !important; }
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
-        }
-        
-        .card-shadow {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        
-        .step-number {
-            background: linear-gradient(45deg, #dc2626, #ef4444);
-        }
+    body {
+        font-size: 10pt;
+        line-height: 1.2;
+        margin: 0.5in; /* Marges d'impression standard */
+        -webkit-print-color-adjust: exact !important; /* Chrome, Safari, Edge */
+        print-color-adjust: exact !important; /* Firefox, Standard */
+    }
+
+    .no-print { display: none !important; }
+    .print-compact { margin: 0 !important; padding: 0.5rem !important; }
+    .print-small { font-size: 8pt !important; }
+    .print-medium { font-size: 10pt !important; }
+    .print-large { font-size: 12pt !important; }
+    .print-break { page-break-before: always; }
+
+    section {
+        margin-bottom: 0.5rem !important;
+        /* Conserver les couleurs de fond des sections */
+    }
+    section.bg-accent { background-color: #f8fafc !important; }
+    section.bg-gray-50 { background-color: #f9fafb !important; } /* Couleur Tailwind gray-50 */
+    section.gradient-bg { /* Pour la section "Votre Prochaine Étape" */
+        background: #f8fafc !important; /* Fond clair uni au lieu du gradient */
+        color: #374151 !important; /* Texte foncé */
+    }
+    section.gradient-bg h2,
+    section.gradient-bg p,
+    section.gradient-bg h3,
+    section.gradient-bg span {
+        color: #374151 !important; /* Assurer que tout le texte est foncé */
+    }
+     section.gradient-bg .text-lg.font-bold.text-white { /* "Votre liberté commence ici !" */
+        color: #dc2626 !important; /* Ou une autre couleur foncée de votre choix */
+    }
+    section.gradient-bg .w-16.h-0\.5.bg-white { /* Séparateur qui était blanc */
+        background-color: #dc2626 !important; /* Le rendre couleur primaire */
+    }
+    section.gradient-bg .bg-white.bg-opacity-15 { /* Boîte des coordonnées */
+        background-color: white !important;
+        border: 1px solid #e5e7eb !important;
+    }
+     section.gradient-bg span.text-white.mr-2 { /* Icônes blanches du CTA */
+        /* Solution simple : les cacher ou leur donner une couleur. */
+        /* Si ce sont des caractères texte, la couleur parente s'appliquera. */
+        /* Si ce sont des SVG inline avec fill="white", il faudra les cibler spécifiquement */
+        color: #374151 !important; /* Pour les icônes emojis/textes */
+    }
+
+
+    .card-shadow {
+        box-shadow: none !important;
+        border: 1px solid #e5e7eb !important;
+    }
+
+    /* En-tête pour l'impression : supprimer le gradient, fond blanc, texte foncé */
+    header.print-compact {
+        background: white !important;
+        color: #374151 !important;
+        padding-bottom: 0.5rem !important; /* Réduire un peu le padding */
+        border-bottom: 1px solid #e5e7eb; /* Optionnel: une ligne de séparation */
+    }
+    /* S'assurer que les textes spécifiques dans le header sont lisibles */
+    header .text-white, header .text-accent {
+        color: #374151 !important;
+    }
+    header h2.text-primary {
+        color: #dc2626 !important; /* Conserver la couleur primaire */
+    }
+    /* Logo dans le header pour l'impression */
+    header .absolute div {
+        background-color: transparent !important; /* Enlever le fond semi-transparent */
+        border: none !important; /* Enlever la bordure */
+        backdrop-filter: none !important;
+        height: auto !important; /* Laisser la taille s'adapter à l'image */
+        width: auto !important;
+    }
+    header .absolute img {
+        height: 2.5rem !important; /* Ajuster la taille du logo pour l'impression */
+        width: auto !important; /* Garder le ratio */
+    }
+    header .text-center {
+        padding-left: 6rem !important; /* Ajuster si la taille du logo change */
+    }
+
+
+    /* Conserver les styles des étapes */
+    .step-number {
+        background: #dc2626 !important; /* Couleur primaire solide au lieu du gradient */
+        color: white !important;
+        /* La taille et la police devraient être conservées par défaut */
+    }
+    .border-l-4.border-primary { border-left-color: #dc2626 !important; }
+    .border-l-4.border-secondary { border-left-color: #6b7280 !important; }
+
+    /* Conserver les couleurs de fond spécifiques des sous-éléments de l'étape 3 */
+    #prospectus-auto-ecole\.html .bg-accent { background-color: #f8fafc !important; }
+    #prospectus-auto-ecole\.html .bg-red-50 { background-color: #fee2e2 !important; } /* Couleur Tailwind red-50 */
+    #prospectus-auto-ecole\.html .border-l-2.border-secondary { border-left-color: #6b7280 !important; }
+    #prospectus-auto-ecole\.html .border-l-2.border-primary { border-left-color: #dc2626 !important; }
+
+
+    /* Conserver les styles des avantages (similaire aux étapes) */
+    /* Les bordures colorées des avantages devraient se conserver avec les surcharges ci-dessus */
+
+    /* Icônes SVG - s'assurer qu'elles gardent leur couleur */
+    svg path[fill="#dc2626"] { fill: #dc2626 !important; }
+    svg path[fill="#6b7280"] { fill: #6b7280 !important; }
+    /* Si d'autres couleurs sont utilisées pour les SVG, ajouter des règles similaires */
+
+    /* Section Investissement - s'assurer que les couleurs de "Facilités de Paiement" sont là */
+    #prospectus-auto-ecole\.html .text-primary { color: #dc2626 !important; }
+    #prospectus-auto-ecole\.html .text-secondary { color: #6b7280 !important; }
+    #prospectus-auto-ecole\.html .bg-accent.rounded.p-2 { background-color: #f8fafc !important; }
+
+
+    /* Footer */
+    footer.bg-dark {
+        background-color: #f1f1f1 !important; /* Gris clair pour le footer */
+        color: #333 !important; /* Texte foncé */
+    }
+}
     </style>
 </head>
 <body class="font-body bg-white text-gray-800">
@@ -225,7 +319,7 @@
     </section>
 
     <!-- Section 4: Votre Investissement (Condensée) -->
-    <section class="py-3 px-4 bg-gray-50 print-compact print-break">
+    <section class="py-3 px-4 bg-gray-50 print-compact">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
                 Votre Investissement pour la Liberté
