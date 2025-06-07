@@ -210,6 +210,18 @@
         background: none !important;
         color: #000000 !important;
     }
+
+    /* Justification sélective avec contrôle d'espacement */
+    .text-justify-print {
+        text-align: justify !important;
+        text-justify: inter-word !important;
+        hyphens: auto !important;
+    }
+    
+    /* Éviter la justification sur la dernière ligne */
+    .text-justify-print:last-child {
+        text-align-last: left !important;
+    }
     /* Footer styling for print: no background, top border, start on new page */
     footer {
         background: none !important;
@@ -264,7 +276,7 @@
             </h2>
             <div class="w-16 h-0.5 bg-primary mb-3"></div>
             
-            <p class="text-sm leading-relaxed print-small text-secondary">
+            <p class="text-sm leading-relaxed print-small text-secondary text-justify-print">
                 Beaucoup de gens pensent que le permis, 
                 <span class="font-semibold text-primary">c'est difficile ou que ça prend beaucoup de temps</span>. 
                 Mais chez <span class="font-bold text-dark">Vertueux Auto-École</span>, nous sommes là pour vous <span class="font-semibold text-dark">aider</span> ! 
@@ -476,7 +488,7 @@
             <div class="w-16 h-0.5 bg-primary mb-3"></div>
             
             <p class="text-sm leading-relaxed print-small text-secondary mb-4">
-                En complément de nos formules complètes, nous proposons également des prestations unitaires pour s'adapter à vos besoins spécifiques :
+                En complément de notre formule complète, nous proposons également des prestations unitaires pour s'adapter à vos besoins spécifiques :
             </p>
             
             <div class="pricing-grid">
