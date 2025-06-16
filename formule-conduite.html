@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prospectus Auto-École - Formule Sérénité Permis</title>
+    <title>Formule Conduite - Vertueux Auto-Ecole</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -60,7 +60,7 @@
         margin-top: 0 !important; 
         margin-left: 0 !important; 
         margin-right: 0 !important; 
-        margin-bottom: 2rem !important; 
+        margin-bottom: 1rem !important; 
         padding: 0.5rem !important; 
     }
     .print-small { font-size: 10pt !important; }
@@ -112,9 +112,13 @@
 
 
     .card-shadow {
+        background-color: #ffffff !important;
         box-shadow: none !important;
         border: 1px solid #5f5f5f !important;
     }
+
+    .print-p-2 { padding: 0.5rem !important; }
+    .print-gap-2 { gap: 0.5rem !important; }
 
     /* En-tête pour l'impression : supprimer le gradient, fond blanc, texte foncé */
     header.print-compact {
@@ -122,7 +126,7 @@
         color: #000000 !important; /* Noir au lieu de gris foncé */
         padding-bottom: 0.5rem !important; /* Réduire un peu le padding */
         border-bottom: 1px solid #cfcfcf; /* Optionnel: une ligne de séparation */
-        margin-bottom: 2.5rem !important;
+        margin-bottom: 1rem !important;
     }
     /* S'assurer que les textes spécifiques dans le header sont lisibles */
     header .text-white, header .text-accent {
@@ -198,7 +202,8 @@
     }
 
     /* Icônes SVG dans la section CTA - les rendre noires en impression */
-    section.gradient-bg svg path[fill="white"] { 
+    section.gradient-bg svg path[fill="white"],
+    section.gradient-bg svg path[fill="#FFFFFF"] { 
         fill: #000000 !important; 
     }
     section.gradient-bg svg path[fill="#dc2626"] { 
@@ -243,6 +248,17 @@
     /* Ensure card backgrounds and borders show in print */
     .card-shadow {
         background-color: #ffffff !important;
+        box-shadow: none !important;
+        border: 1px solid #5f5f5f !important;
+    }
+
+    .cta-options-grid {
+        gap: 0.75rem !important;
+    }
+    .cta-option-card {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
     }
 }
     </style>
@@ -263,100 +279,81 @@
         <!-- Contenu centré -->
         <div class="text-center pl-36">
             <h1 class="text-2xl md:text-3xl font-heading font-bold print-large text-white">Vertueux Auto-École</h1>
-            <h2 class="text-lg md:text-xl font-semibold text-primary print-medium">Formule Sérénité Permis</h2>
-            <p class="text-sm print-small mt-1 text-accent">Votre Permis de Conduire en Toute Confiance et Sérénité</p>
+            <h2 class="text-lg md:text-xl font-semibold text-primary print-medium">Formule Maîtrise Volant</h2>
+            <p class="text-sm print-small mt-1 text-accent">Votre Permis de Conduire : La Pratique Qui Mène au Succès !</p>
         </div>
     </header>
 
-    <!-- Section 1: Notre Philosophie (Condensée) -->
+    <!-- Section 1: Votre Objectif : La Route en Toute Confiance -->
     <section class="py-3 px-4 bg-accent print-compact">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
-                Obtenir Votre Permis : Plus Qu'un Examen, Une Nouvelle Liberté
+                La Conduite : Votre Chemin Vers l'Autonomie
             </h2>
             <div class="w-16 h-0.5 bg-primary mb-3"></div>
             
             <p class="text-sm leading-relaxed print-small text-secondary text-justify-print">
-                Beaucoup de gens pensent que le permis, 
-                <span class="font-semibold text-primary">c'est difficile ou que ça prend beaucoup de temps</span>. 
-                Mais chez <span class="font-bold text-dark">Vertueux Auto-École</span>, nous sommes là pour vous <span class="font-semibold text-dark">aider</span> ! 
-                Notre mission est de vous accompagner pour que vous apreniez à conduire <span class="font-semibold text-dark">sans stress, étape par étape</span>.
-                Vous allez devenir un conducteur <span class="font-semibold text-dark">confiant et sûr </span>sur la route.
+                Vous avez déjà le code en poche, ou vous avez déjà commencé à prendre des leçons de conduite ? L'étape de la pratique est cruciale pour obtenir votre permis et gagner votre liberté au volant. Chez Vertueux Auto-Ecole, notre mission est de vous accompagner avec une approche <span class="font-semibold text-dark">personnalisée et efficace</span>, quel que soit votre niveau, pour que vous deveniez un conducteur sûr et confiant.
             </p>
         </div>
     </section>
 
-    <!-- Section 2: La Formule (Condensée) -->
+    <!-- Section 2: Formule Maîtrise Volant -->
     <section class="py-3 px-4 bg-gray-50 print-compact">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
-                Le plan de la Formule Sérénité Permis: De l'inscription au Permis
+                Formule Maîtrise Volant : Votre Plan Personnalisé pour Réussir
             </h2>
             <div class="w-16 h-0.5 bg-primary mb-3"></div>
             
-            <div class="space-y-2">
-                <!-- Étape 1 -->
-                <div class="bg-white rounded-lg p-3 card-shadow flex items-start space-x-3 border-l-4 border-primary">
-                    <div class="step-number text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs shrink-0">1</div>
-                    <div>
-                        <h3 class="text-sm font-bold text-dark mb-1 print-small">Évaluation Personnalisée de Départ</h3>
-                        <p class="text-xs text-secondary print-small">Une analyse précise de vos besoins pour un plan de formation sur mesure.</p>
-                    </div>
-                </div>
+            <p class="text-sm leading-relaxed print-small text-secondary mb-4 text-center">
+                Pour vous garantir la meilleure progression, nous adaptons notre accompagnement à votre expérience de conduite. Le point de départ est toujours une évaluation en voiture.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 print-gap-2">
                 
-                <!-- Étape 2 -->
-                <div class="bg-white rounded-lg p-3 card-shadow flex items-start space-x-3 border-l-4 border-secondary">
-                    <div class="step-number text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs shrink-0">2</div>
-                    <div>
-                        <h3 class="text-sm font-bold text-dark mb-1 print-small">Démarches Administratives Simplifiées</h3>
-                        <p class="text-xs text-secondary print-small">Nous nous occupons d'obtenir votre numéro NEPH pour vous libérer de la paperasse.</p>
-                    </div>
-                </div>
-                
-                <!-- Étape 3 -->
-                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
-                    <div class="flex items-start space-x-3 mb-2">
-                        <div class="step-number text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs shrink-0">3</div>
-                        <h3 class="text-sm font-bold text-dark print-small">Le Code : L'alliance Parfaite entre Flexibilité et Expertise</h3>
-                    </div>
-                    <div class="ml-9 space-y-1">
-                        <div class="bg-gray-300 border-l-2 border-secondary p-2 rounded text-xs print-small">
-                            <div class="flex items-start">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32" class="mr-2 shrink-0 mt-0.5"><path d="M14.5 9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm-5 5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm4 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-4-11a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm0 10a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm9-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm0-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-5 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm6 4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1z"/><path d="M9 2a3 3 0 0 0-3 3v22a3 3 0 0 0 3 3h13a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zm15 4v20H7V6z"/></g></svg>
-                                <div>
-                                    <div class="font-bold text-dark">Accès Illimité au Code en Ligne</div>
-                                    <div class="text-secondary">- Entraînez-vous 24h/24, 7j/7, où vous voulez.</div>
-                                </div>
-                            </div>
+                <!-- Sous-section A: Débutants -->
+                <div class="bg-white rounded-lg p-4 card-shadow border-l-4 border-primary flex flex-col print-p-2">
+                    <h3 class="text-md font-bold text-dark mb-2 print-medium">Vous débutez la Conduite (avec le Code déjà en poche) ?</h3>
+                    <h4 class="text-sm font-semibold text-primary mb-3 print-small">Votre Première Étape vers la Maîtrise</h4>
+                    <p class="text-xs text-secondary print-small mb-3">Si vous n'avez jamais ou peu conduit en auto-école, cette formule est faite pour vous :</p>
+                    <div class="space-y-2 flex-grow">
+                        <div class="flex items-start space-x-3">
+                            <div class="step-number text-white rounded-full w-5 h-5 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">1</div>
+                            <p class="text-xs text-secondary print-small"><strong class="text-dark">Évaluation Initiale en Voiture :</strong> Une séance pratique pour évaluer précisément vos bases et définir le plan de leçons le plus efficace pour vous.</p>
                         </div>
-                        <div class="bg-red-100 border-l-2 border-primary p-2 rounded text-xs print-small">
-                            <div class="flex items-start">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0 mt-0.5"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#dc2626" d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z"/></g></svg>
-                                <div>
-                                    <div class="font-bold text-primary">Le PLUS qui fait la différence: 10 Séances en Salle avec Formateur !</div>
-                                    <div class="text-secondary">- Des sessions interactives pour comprendre vraiment, poser toutes vos questions et être prêt à 100%.</div>
-                                </div>
-                            </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="step-number text-white rounded-full w-5 h-5 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</div>
+                            <p class="text-xs text-secondary print-small"><strong class="text-dark">20 Leçons de Conduite Personnalisées :</strong> Profitez de 20 heures de pratique intensive avec <span class="font-bold text-primary">le MÊME formateur</span> qui vous suivra du début à la fin. C'est essentiel pour une progression fluide, une confiance accrue et un apprentissage cohérent.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="step-number text-white rounded-full w-5 h-5 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</div>
+                            <p class="text-xs text-secondary print-small"><strong class="text-dark">Bilan des 20h :</strong> Une fois ces 20 leçons réalisées, nous ferons le point ensemble pour ajuster le nombre d'heures nécessaires et vous préparer au mieux à l'examen.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="step-number text-white rounded-full w-5 h-5 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">4</div>
+                            <p class="text-xs text-secondary print-small"><strong class="text-dark">Accompagnement à l'Examen de Conduite :</strong> Nous vous préparons et vous accompagnons le jour de votre épreuve pratique pour le permis de conduire.</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Étape 4 -->
-                <div class="bg-white rounded-lg p-3 card-shadow flex items-start space-x-3 border-l-4 border-secondary">
-                    <div class="step-number text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs shrink-0">4</div>
-                    <div>
-                        <h3 class="text-sm font-bold text-dark mb-1 print-small">Conduite: Votre formateur Dédié au Volant</h3>
-                        <p class="text-xs text-secondary print-small">Profiter de 20 leçons de conduite avec le <span class="font-bold text-primary">MÊME formateur</span>, qui vous connaît et s'adapte à votre rythme. C'est la clé d'une progression, rapide , fluide et d'une confiance solide au volant.</p>
-                    </div>
-                </div>
-                
-                <!-- Étape 5 -->
-                <div class="bg-white rounded-lg p-3 card-shadow flex items-start space-x-3 border-l-4 border-primary">
-                    <div class="step-number text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs shrink-0">5</div>
-                    <div>
-                        <h3 class="text-sm font-bold text-dark mb-1 print-small">Vos examens en Toute Sérénité</h3>
-                        <p class="text-xs text-secondary print-small"><span class="font-bold text-dark">Code de la Route:</span> Le coût de votre passage à l'examen du code est pris en charge dans votre formule</p>
-                        <p class="text-xs text-secondary print-small"><span class="font-bold text-dark">Permis de Conduire:</span> Pour l'épreuve pratique, nous vous préparons minutieusement et sommes à vos côtés le jour J pour vous rassurer et vous accompagner jusqu'à la réussite.</p>
+                <!-- Sous-section B: Expérimentés -->
+                <div class="bg-white rounded-lg p-4 card-shadow border-l-4 border-secondary flex flex-col print-p-2">
+                    <h3 class="text-md font-bold text-dark mb-2 print-medium">Vous avez déjà de l'expérience en Conduite, ou avez déjà tenté l'examen du permis ?</h3>
+                    <p class="text-xs text-secondary print-small mb-3">Que vous ayez déjà pris des leçons, que vous ayez besoin de vous perfectionner après une pause, ou que vous ayez déjà tenté l'examen du permis sans succès, nous sommes là pour vous aider à franchir cette dernière étape. Nous vous proposons une approche ciblée pour votre réussite :</p>
+                    <div class="space-y-2 flex-grow">
+                        <div class="flex items-start space-x-3">
+                            <div class="step-number bg-secondary text-white rounded-full w-5 h-5 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">1</div>
+                            <p class="text-xs text-secondary print-small"><strong class="text-dark">Évaluation Approfondie en Voiture :</strong> Nous évaluons votre niveau actuel pour identifier précisément vos points forts et les axes à travailler. Cette étape est cruciale pour corriger les erreurs passées et optimiser votre préparation.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="step-number bg-secondary text-white rounded-full w-5 h-5 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</div>
+                            <p class="text-xs text-secondary print-small"><strong class="text-dark">Leçons de Conduite à l'Unité :</strong> Après l'évaluation, vous prenez uniquement les leçons dont vous avez besoin pour atteindre votre objectif. Fini les heures inutiles : <span class="font-bold text-dark">chaque leçon vous rapproche de votre permis</span> !</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="step-number bg-secondary text-white rounded-full w-5 h-5 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</div>
+                            <p class="text-xs text-secondary print-small"><strong class="text-dark">Accompagnement à l'Examen de Conduite :</strong> Si votre objectif est de passer le permis, nous assurons votre préparation finale et votre accompagnement le jour de l'épreuve. Nous mettons tout en œuvre pour que vous soyez <span class="font-bold text-dark">confiant(e) et prêt(e) à réussir</span>.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -367,52 +364,41 @@
     <section class="py-3 px-4 bg-accent print-compact print-break">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
-                Pourquoi Choisir Vertueux Auto-École ?
+                Pourquoi Choisir Vertueux Auto-Ecole pour Votre Conduite ?
             </h2>
             <div class="w-16 h-0.5 bg-primary mb-3"></div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <!-- Avantage 1 -->
                 <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
                     <div class="flex items-center mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><path fill="#dc2626" d="M16 17v2H2v-2s0-4 7-4s7 4 7 4m-3.5-9.5A3.5 3.5 0 1 0 9 11a3.5 3.5 0 0 0 3.5-3.5m3.44 5.5A5.32 5.32 0 0 1 18 17v2h4v-2s0-3.63-6.06-4M15 4a3.4 3.4 0 0 0-1.93.59a5 5 0 0 1 0 5.82A3.4 3.4 0 0 0 15 11a3.5 3.5 0 0 0 0-7"/></svg>
-                        <h3 class="text-sm font-bold text-dark print-small">Suivi Personnalisé & Continu</h3>
+                        <h3 class="text-sm font-bold text-dark print-small">Votre Formateur Dédié</h3>
                     </div>
                     <p class="text-xs text-secondary print-small">
-                        Vous progressez avec le même formateur, qui connaît vos forces et vos axes d'amélioration. Une relation de confiance pour une meilleure efficacité.
+                        Un seul et même formateur vous accompagne tout au long de votre parcours pour une progression cohérente et une relation de confiance.
                     </p>
                 </div>
                 
                 <!-- Avantage 2 -->
                 <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-secondary">
                     <div class="flex items-center mb-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32" class="mr-2 shrink-0"><path fill="#6b7280" d="m16 7.78l-.313.095l-12.5 4.188L.345 13L2 13.53v8.75c-.597.347-1 .98-1 1.72a2 2 0 1 0 4 0c0-.74-.403-1.373-1-1.72v-8.06l2 .655V20c0 .82.5 1.5 1.094 1.97c.594.467 1.332.797 2.218 1.093c1.774.59 4.112.937 6.688.937s4.914-.346 6.688-.938c.886-.295 1.624-.625 2.218-1.093C25.5 21.5 26 20.82 26 20v-5.125l2.813-.938L31.655 13l-2.843-.938l-12.5-4.187zm0 2.095L25.375 13L16 16.125L6.625 13zm-8 5.688l7.688 2.562l.312.094l.313-.095L24 15.562V20c0 .01.004.126-.313.375c-.316.25-.883.565-1.625.813C20.58 21.681 18.395 22 16 22s-4.58-.318-6.063-.813c-.74-.247-1.308-.563-1.624-.812C7.995 20.125 8 20.01 8 20z"/></svg>
-                        <h3 class="text-sm font-bold text-dark print-small">Des Séances de Code Interactives en Salle</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" class="mr-2 shrink-0"><path fill="#6b7280" d="M240 208h-16v-72l2.34 2.34A8 8 0 0 0 237.66 127l-98.35-98.32a16 16 0 0 0-22.62 0L18.34 127a8 8 0 0 0 11.32 11.31L32 136v72H16a8 8 0 0 0 0 16h224a8 8 0 0 0 0-16M48 120l80-80l80 80v88h-48v-56a8 8 0 0 0-8-8h-48a8 8 0 0 0-8 8v56H48Zm96 88h-32v-48h32Z"/></svg>
+                        <h3 class="text-sm font-bold text-dark print-small">Confort Optimisé: Récupération à Domicile</h3>
                     </div>
                     <p class="text-xs text-secondary print-small">
-                        Bien plus qu'un écran ! nos sessions en présentiel avec un formateur garantissent une compréhension profonde et une préparation optimale.
+                        Nous venons vous chercher à votre domicile, école, université ou travail (dans le centre-ville de Cayenne) for your driving lessons.
                     </p>
                 </div>
                 
                 <!-- Avantage 3 -->
                 <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
                     <div class="flex items-center mb-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" class="mr-2 shrink-0"><path fill="#dc2626" d="M240 208h-16v-72l2.34 2.34A8 8 0 0 0 237.66 127l-98.35-98.32a16 16 0 0 0-22.62 0L18.34 127a8 8 0 0 0 11.32 11.31L32 136v72H16a8 8 0 0 0 0 16h224a8 8 0 0 0 0-16M48 120l80-80l80 80v88h-48v-56a8 8 0 0 0-8-8h-48a8 8 0 0 0-8 8v56H48Zm96 88h-32v-48h32Z"/></svg>
-                        <h3 class="text-sm font-bold text-dark print-small">Confort Optimisé: Récupération à Domicile</h3>
-                    </div>
-                    <p class="text-xs text-secondary print-small">
-                        Pour vous simplifier la vie, nous venons vous chercher à votre domicile, école, université ou travail (dans le centre-ville de Cayenne et ses environs).
-                    </p>
-                </div>
-                
-                <!-- Avantage 4 -->
-                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-secondary">
-                    <div class="flex items-center mb-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512" class="mr-2 shrink-0"><rect width="416" height="320" x="48" y="96" fill="none" stroke="#6b7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="56" ry="56"/><path fill="none" stroke="#6b7280" stroke-linejoin="round" stroke-width="60" d="M48 192h416M128 300h48v20h-48z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512" class="mr-2 shrink-0"><rect width="416" height="320" x="48" y="96" fill="none" stroke="#dc2626" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="56" ry="56"/><path fill="none" stroke="#dc2626" stroke-linejoin="round" stroke-width="60" d="M48 192h416M128 300h48v20h-48z"/></svg>
                         <h3 class="text-sm font-bold text-dark print-small">Des Facilités de Paiement</h3>
                     </div>
                     <p class="text-xs text-secondary print-small">
-                        Votre budget ne sera pas un frein à votre liberté. Profitez de nos options de paiement flexibles (jusqu'à 4 fois sans frais).
+                        Votre budget ne sera pas un frein à votre liberté. Profitez de nos options de paiement flexibles (jusqu'à 4 fois sans frais) pour toutes nos formules et prestations.
                     </p>
                 </div>
             </div>
@@ -423,43 +409,28 @@
     <section class="py-3 px-4 bg-gray-50 print-compact">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
-                Votre Investissement pour la Liberté
+                Votre Investissement pour la Maîtrise au Volant
             </h2>
             <div class="w-16 h-0.5 bg-primary mx-auto mb-3"></div>
 
-            <p class="text-sm text-dark leading-relaxed mb-3 mx-auto max-w-2xl">La formule Sérénité est un investissement dans votre autonomie, conçue pour maximiser vos chances de succès en minimisant le stress.</p>
+            <p class="text-sm text-dark leading-relaxed mb-3 mx-auto max-w-2xl">La Formule Maîtrise Volant est conçue pour vous offrir le meilleur chemin vers le succès, en optimisant votre temps et votre budget.</p>
             
             <div class="bg-white rounded-lg p-3 card-shadow max-w-md mx-auto border-2 border-light">
-                <h3 class="text-lg font-bold text-secondary mb-1 print-medium">Formule Sérénité Permis</h3>
-                <div class="text-3xl font-bold text-primary mb-2 print-large">1390€</div>
-                
-                <!-- Offre Spéciale Jeunes -->
-                <div class="bg-red-100 rounded-lg py-2 px-2 my-2">
-                    <div class="flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="shrink-0"><path fill="#dc2626" d="M7.846 8.822c.427-1.027 1.881-1.027 2.308 0l1.214 2.919l3.151.252c1.108.09 1.558 1.472.713 2.195l-2.4 2.057l.733 3.075c.258 1.081-.918 1.936-1.867 1.357L9 19.029l-2.698 1.648c-.949.58-2.125-.276-1.867-1.357l.733-3.075l-2.4-2.057c-.845-.723-.395-2.106.713-2.195l3.15-.252zM9 9.953l-1.042 2.505a1.25 1.25 0 0 1-1.054.766L4.2 13.44l2.06 1.765c.356.305.512.784.403 1.24l-.63 2.638l2.315-1.414a1.25 1.25 0 0 1 1.304 0l2.315 1.414l-.63-2.638a1.25 1.25 0 0 1 .403-1.24l2.06-1.765l-2.704-.216a1.25 1.25 0 0 1-1.054-.766z"></path><path fill="#dc2626" d="M13.538 3.11a.5.5 0 0 1 .923 0l.48 1.152a.5.5 0 0 0 .421.306l1.244.1a.5.5 0 0 1 .285.878l-.947.812a.5.5 0 0 0-.162.495l.29 1.214a.5.5 0 0 1-.747.542l-1.065-.65a.5.5 0 0 0-.52 0l-1.065.65a.5.5 0 0 1-.747-.542l.289-1.214a.5.5 0 0 0-.161-.495l-.947-.812a.5.5 0 0 1 .285-.878l1.243-.1a.5.5 0 0 0 .422-.306zm5.009 6.86a.5.5 0 0 1 .906 0l.425.91a.5.5 0 0 0 .241.242l.91.425a.5.5 0 0 1 0 .906l-.91.425a.5.5 0 0 0-.241.241l-.425.91a.5.5 0 0 1-.906 0l-.425-.91a.5.5 0 0 0-.242-.241l-.91-.425a.5.5 0 0 1 0-.906l.91-.425a.5.5 0 0 0 .242-.241z" opacity="0.5"></path></svg>
-                        <span class="text-sm font-bold text-primary print-small mx-2">OFFRE SPÉCIALE JEUNES</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="shrink-0"><path fill="#dc2626" d="M7.846 8.822c.427-1.027 1.881-1.027 2.308 0l1.214 2.919l3.151.252c1.108.09 1.558 1.472.713 2.195l-2.4 2.057l.733 3.075c.258 1.081-.918 1.936-1.867 1.357L9 19.029l-2.698 1.648c-.949.58-2.125-.276-1.867-1.357l.733-3.075l-2.4-2.057c-.845-.723-.395-2.106.713-2.195l3.15-.252zM9 9.953l-1.042 2.505a1.25 1.25 0 0 1-1.054.766L4.2 13.44l2.06 1.765c.356.305.512.784.403 1.24l-.63 2.638l2.315-1.414a1.25 1.25 0 0 1 1.304 0l2.315 1.414l-.63-2.638a1.25 1.25 0 0 1 .403-1.24l2.06-1.765l-2.704-.216a1.25 1.25 0 0 1-1.054-.766z"></path><path fill="#dc2626" d="M13.538 3.11a.5.5 0 0 1 .923 0l.48 1.152a.5.5 0 0 0 .421.306l1.244.1a.5.5 0 0 1 .285.878l-.947.812a.5.5 0 0 0-.162.495l.29 1.214a.5.5 0 0 1-.747.542l-1.065-.65a.5.5 0 0 0-.52 0l-1.065.65a.5.5 0 0 1-.747-.542l.289-1.214a.5.5 0 0 0-.161-.495l-.947-.812a.5.5 0 0 1 .285-.878l1.243-.1a.5.5 0 0 0 .422-.306zm5.009 6.86a.5.5 0 0 1 .906 0l.425.91a.5.5 0 0 0 .241.242l.91.425a.5.5 0 0 1 0 .906l-.91.425a.5.5 0 0 0-.241.241l-.425.91a.5.5 0 0 1-.906 0l-.425-.91a.5.5 0 0 0-.242-.241l-.91-.425a.5.5 0 0 1 0-.906l.91-.425a.5.5 0 0 0 .242-.241z" opacity="0.5"></path></svg>
-                    </div>
-                    <p class="text-xs text-dark print-small mt-1">
-                        Si vous avez <span class="font-bold">- de 26 ans</span>, profitez de la formule Sérénité Permis à <span class="font-bold text-primary text-lg">1250€</span>
-                    </p>
-                </div>
+                <h3 class="text-lg font-bold text-secondary mb-1 print-medium">Formule Maîtrise Volant</h3>
+                <div class="text-3xl font-bold text-primary mb-2 print-large">1109€</div>
 
                 <div class="border-t border-gray-500 mt-3 pt-2 text-left">
                     <h4 class="text-sm font-bold text-dark mb-2 print-small text-center">Prestations incluses</h4>
-                    <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-secondary print-small">
-                        <span>• Évaluation de départ</span>
-                        <span>• Code en ligne (3 mois)</span>
-                        <span>• 10 séances code (formateur)</span>
-                        <span>• 1 examen du code</span>
+                    <div class="grid grid-cols-1 text-center gap-y-1 text-xs text-secondary print-small">
+                        <span>• Livret numérique</span>
                         <span>• 20 leçons de conduite</span>
-                        <span>• Démarches administratives</span>
                         <span>• 1 accompagnement examen</span>
                     </div>
                 </div>
                 
                 <div class="border-t border-gray-500 pt-2 mt-2">
                     <h4 class="text-sm font-bold text-dark mb-2 print-small text-center">Facilités de Paiement</h4>
+                    <p class="text-xs text-secondary print-small mb-2">Possibilité de paiement en 2, 3 ou 4 fois sans frais pour tous nos tarifs.</p>
                     <div class="flex justify-center space-x-2">
                         <div class="bg-gray-300 rounded p-2 text-xs print-small border border-light">
                             <div class="font-bold text-primary">2x</div>
@@ -483,15 +454,15 @@
     <section class="py-3 px-4 bg-accent print-compact">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
-                Besoin de Plus ? Nos Tarifs au Détail
+                Besoin de Flexibilité ? Nos Prestations Unitaires
             </h2>
             <div class="w-16 h-0.5 bg-primary mb-3"></div>
             
             <p class="text-sm leading-relaxed print-small text-secondary mb-4">
-                En complément de notre formule complète, nous proposons également des prestations unitaires pour s'adapter à vos besoins spécifiques :
+                Pour compléter votre formation ou répondre à un besoin précis, voici nos tarifs à l'unité :
             </p>
             
-            <div class="pricing-grid">
+            <div class="pricing-grid" style="grid-template-columns: 1fr 1fr;">
                 <!-- Leçon de conduite -->
                 <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
                     <div class="flex items-center justify-between mb-2">
@@ -504,64 +475,40 @@
                     <p class="text-xs text-secondary print-small">Durée : 1h</p>
                 </div>
                 
-                <!-- Code en ligne 3 mois -->
-                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-secondary">
-                    <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><path fill="#6b7280" d="M4 6V4h16v2zm0 14v-6H3v-2l1-5h16l1 5v2h-1v6h-2v-6H6v6zm2-8h12l-.8-4H6.8z"/></svg>
-                            <h3 class="text-sm font-bold text-dark print-small">Code en ligne</h3>
-                        </div>
-                        <div class="text-lg font-bold text-secondary">50€</div>
-                    </div>
-                    <p class="text-xs text-secondary print-small">Accès 3 mois</p>
-                </div>
-                
-                <!-- Code en ligne 1 mois -->
-                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
-                    <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><path fill="#dc2626" d="M4 6V4h16v2zm0 14v-6H3v-2l1-5h16l1 5v2h-1v6h-2v-6H6v6zm2-8h12l-.8-4H6.8z"/></svg>
-                            <h3 class="text-sm font-bold text-dark print-small">Code en ligne</h3>
-                        </div>
-                        <div class="text-lg font-bold text-primary">20€</div>
-                    </div>
-                    <p class="text-xs text-secondary print-small">Accès 1 mois</p>
-                </div>
-                
-                <!-- Séance code en salle -->
-                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-secondary">
-                    <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><path fill="#6b7280" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6L23 9zm6.82 6L12 12.72L5.18 9L12 5.28zM17 15.99l-5 2.73l-5-2.73v-3.72L12 15l5-2.73z"/></svg>
-                            <h3 class="text-sm font-bold text-dark print-small">Séance Code en salle</h3>
-                        </div>
-                        <div class="text-lg font-bold text-secondary">25€</div>
-                    </div>
-                    <p class="text-xs text-secondary print-small">1 heure avec formateur</p>
-                </div>
-                
-                <!-- Examen code -->
-                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
-                    <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><path fill="#dc2626" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z"/></svg>
-                            <h3 class="text-sm font-bold text-dark print-small">Examen Code</h3>
-                        </div>
-                        <div class="text-lg font-bold text-primary">30€</div>
-                    </div>
-                    <p class="text-xs text-secondary print-small">Redevance ETG + Réservation</p>
-                </div>
-                
-                <!-- Accompagnement examen -->
+                <!-- Accompagnement Examen -->
                 <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-secondary">
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><path fill="#6b7280" d="M16 17v2H2v-2s0-4 7-4s7 4 7 4m-3.5-9.5A3.5 3.5 0 1 0 9 11a3.5 3.5 0 0 0 3.5-3.5m3.44 5.5A5.32 5.32 0 0 1 18 17v2h4v-2s0-3.63-6.06-4M15 4a3.4 3.4 0 0 0-1.93.59a5 5 0 0 1 0 5.82A3.4 3.4 0 0 0 15 11a3.5 3.5 0 0 0 0-7"/></svg>
-                            <h3 class="text-sm font-bold text-dark print-small">Accompagnement</h3>
+                            <h3 class="text-sm font-bold text-dark print-small">Accompagnement Examen</h3>
                         </div>
                         <div class="text-lg font-bold text-secondary">54€</div>
                     </div>
-                    <p class="text-xs text-secondary print-small">Examen de conduite</p>
+                    <p class="text-xs text-secondary print-small">Épreuve pratique</p>
+                </div>
+                
+                <!-- Heure d'évaluation -->
+                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><path fill="#dc2626" d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12A7 7 0 0 0 5 12a7 7 0 0 0 7 7a7 7 0 0 0 7-7a7 7 0 0 0-7-7"/></svg>
+                            <h3 class="text-sm font-bold text-dark print-small">Evaluation de départ en circulation</h3>
+                        </div>
+                        <div class="text-lg font-bold text-primary">65€</div>
+                    </div>
+                    <p class="text-xs text-secondary print-small">Heure d'évaluation</p>
+                </div>
+                
+                <!-- Demande de permis -->
+                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-secondary">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><path fill="#6b7280" d="M22 8.5h-1.5V6h-3V4.5H16V3h-2v1.5h-1.5V6H11V4.5H9.5V3H8v1.5H6.5V6H5V4.5H3.5V6H2v2.5h1.5V10h3v1.5H8V13h2v-1.5h1.5V10h1.5v1.5H15V13h2v-1.5h1.5V10H20V8.5zM6.5 18H5v-4.5h1.5zm3-3.5v-1H8V13H6.5v1.5H5v1h1.5V17H8v-1.5h1.5V17H11v-1.5h-1.5zM12.5 18v-1.5H11V15h1.5v-1.5H11V12h1.5V10h1v1.5h1.5V10H16v2h-1.5v1.5H16V15h-1.5v1.5H13v1.5zM19 18h-1.5v-4.5H19z"/></svg>
+                            <h3 class="text-sm font-bold text-dark print-small">Délivrance permis</h3>
+                        </div>
+                        <div class="text-lg font-bold text-secondary">40€</div>
+                    </div>
+                    <p class="text-xs text-secondary print-small">Demande de titre définitif</p>
                 </div>
             </div>
         </div>
@@ -571,7 +518,7 @@
     <section class="py-3 px-4 bg-accent print-compact">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-xl font-heading font-bold text-dark mb-2 print-medium">
-                Ils témoignent de leur succès !
+                Nos Élèves Témoignent de Leur Succès au Volant !
             </h2>
             <div class="w-16 h-0.5 bg-primary mb-3"></div>
             
@@ -640,51 +587,21 @@
                 Pour que votre inscription soit aussi simple que possible, voici les quelques documents à préparer. Notre équipe est là pour vous guider si vous avez la moindre question !
             </p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="max-w-md mx-auto">
                 <!-- Documents principaux -->
                 <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-primary">
                     <h3 class="text-sm font-bold text-dark mb-2 print-small flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><path fill="#dc2626" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm4 18H6V4h7v5h5z"/></svg>
-                        Documents Obligatoires
+                        Documents à Fournir
                     </h3>
                     <ul class="space-y-1 text-xs text-secondary print-small">
                         <li class="flex items-start">
                             <span class="text-primary mr-2 shrink-0">•</span>
-                            <span><strong>Copie de votre pièce d'identité</strong> (carte nationale d'identité, passeport ou titre de séjour)</span>
+                            <span>Attestation d'inscription au permis de conduire</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-primary mr-2 shrink-0">•</span>
-                            <span><strong>Justificatif de domicile de moins de 6 mois</strong> (facture d'électricité, d'eau, de téléphone fixe/internet, quittance de loyer)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-primary mr-2 shrink-0">•</span>
-                            <span><strong>Code ePhoto agréé ANTS</strong></span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Documents spécifiques -->
-                <div class="bg-white rounded-lg p-3 card-shadow border-l-4 border-secondary">
-                    <h3 class="text-sm font-bold text-dark mb-2 print-small flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="mr-2 shrink-0"><path fill="#6b7280" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z"/></svg>
-                        Selon Votre Situation
-                    </h3>
-                    <ul class="space-y-1 text-xs text-secondary print-small">
-                        <li class="flex items-start">
-                            <span class="text-secondary mr-2 shrink-0">•</span>
-                            <span><strong>Si vous êtes hébergé(e) :</strong> Copie pièce d'identité de l'hébergeant + attestation d'hébergement signée</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-secondary mr-2 shrink-0">•</span>
-                            <span><strong>Copie de votre JDC</strong> (Journée Défense et Citoyenneté) si vous avez entre 17 et 25 ans</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-secondary mr-2 shrink-0">•</span>
-                            <span><strong>Copie de l'ASSR 2</strong> si vous avez moins de 21 ans</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-secondary mr-2 shrink-0">•</span>
-                            <span><strong>Si vous êtes mineur(e) :</strong> Copie pièce d'identité du représentant légal</span>
+                            <span>Attestation de réussite à l'examen du code de la route</span>
                         </li>
                     </ul>
                 </div>
@@ -696,13 +613,34 @@
     <section class="py-4 px-4 gradient-bg text-white print-compact">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-xl font-heading font-bold mb-2 print-medium">
-                Votre Prochaine Étape vers le Permis !
+                Votre Permis de Conduire : C'est Maintenant !
             </h2>
             <div class="w-16 h-0.5 bg-white mx-auto mb-3"></div>
             
             <p class="text-sm mb-4 print-small">
-                N'attendez plus pour démarrer votre parcours vers l'autonomie. Contactez-nous dès aujourd'hui pour programmer votre évaluation personnalisée !
+                N'attendez plus pour prendre le volant en toute confiance. Chez Vertueux Auto-Ecole, nous vous offrons plusieurs chemins pour démarrer votre formation pratique, celui qui vous convient le mieux :
             </p>
+
+            <!-- Options Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm print-small mb-4 text-white cta-options-grid">
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg border border-white border-opacity-30 text-center cta-option-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="h-8 w-8 mx-auto mb-2"><path fill="#FFFFFF" d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16m11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5s1.5.67 1.5 1.5s-.67 1.5-1.5 1.5M5 11l1.5-4.5h11L19 11z"/></svg>
+                    <h3 class="font-bold mb-2">Démarrez avec une Évaluation en Voiture !</h3>
+                    <p class="text-xs">C'est le point de départ idéal pour un parcours adapté à votre niveau et optimisé pour votre réussite.</p>
+                </div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg border border-white border-opacity-30 text-center cta-option-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="h-8 w-8 mx-auto mb-2"><path fill="#FFFFFF" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                    <h3 class="font-bold mb-2">Venez nous Rencontrer !</h3>
+                    <p class="text-xs">Passez nous voir à l'auto-école, visitez nos locaux et discutez de votre projet avec notre équipe. Nous sommes là pour répondre à toutes vos questions.</p>
+                </div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg border border-white border-opacity-30 text-center cta-option-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="h-8 w-8 mx-auto mb-2"><path fill="#FFFFFF" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                    <h3 class="font-bold mb-2">Obtenez un Bilan Personnalisé Gratuit !</h3>
+                    <p class="text-xs">Vous avez des questions spécifiques ? Prenez rendez-vous pour un entretien sans engagement pour discuter de vos besoins et définir le meilleur chemin pour vous.</p>
+                </div>
+            </div>
+
+            <p class="font-bold text-sm mb-4">Contactez-nous dès aujourd'hui pour choisir votre chemin et commencer votre aventure vers le permis !</p>
             
             <div class="bg-white bg-opacity-15 backdrop-blur-lg rounded-lg p-4 border border-lightGray">
                 <h3 class="text-lg font-bold mb-3 print-medium">Nos Coordonnées</h3>
@@ -852,7 +790,7 @@
 5. Taille recommandée: 200x200px minimum
 
 📁 Structure recommandée:
-├── prospectus-auto-ecole.html
+├── formule-conduite.html
 └── img/
     └── logo_red.png
         `);
